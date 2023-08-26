@@ -1,0 +1,45 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Assignment1Application {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please enter first integer: ");
+        int numba1 = scanner.nextInt();
+        System.out.println("Please enter second integer: ");
+        int numba2 = scanner.nextInt();
+        System.out.println("Please enter third integer: ");
+        int numba3 = scanner.nextInt();
+
+
+        if (numba1 % 2 == 0) {
+            double aver = (numba1 + numba2 + numba3) / 3.0;
+            System.out.printf("First integer is even and so this is the average: %.2f%n", aver);
+        }
+        else {
+            int product = numba1 * numba2 * numba3;
+            System.out.println("First integer is odd and so this is the product: " + product);
+        }
+
+        int small;
+        small = Math.min(Math.min(numba1, numba2), numba3);
+        System.out.println("The minimum integer is: " + small);
+
+        int large;
+        large = Math.max(Math.max(numba1, numba2), numba3);
+        System.out.println("The maximum integer is: " + large);
+
+        int[] ar = {numba1, numba2, numba3};
+        Arrays.sort(ar);
+
+        System.out.print("Here's the integers in ascending order: ");
+        System.out.print(Arrays.toString(ar));
+
+
+        }
+
+
+        }
+
